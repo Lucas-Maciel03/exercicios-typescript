@@ -1,8 +1,8 @@
 "use strict";
-//comandos TS
 /*
+    ALGUNS COMANDOS TS
     para compilar quando salvar o arquivo: tsc -w
-    para criar o arquivo tsconfig: tsc --
+    para criar o arquivo tsconfig.json: tsc --init
 */
 // 1- number
 let x = 20;
