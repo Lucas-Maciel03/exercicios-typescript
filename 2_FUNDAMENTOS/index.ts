@@ -1,3 +1,9 @@
+/*
+    ALGUNS COMANDOS TS
+    para compilar quando salvar o arquivo: tsc -w
+    para criar o arquivo tsconfig.json: tsc --init
+*/
+
 // 1- number
 let x: number = 20
 
@@ -43,3 +49,4 @@ let ann: string = "Anotation"
 //inference - aqui vc nao declara o tipo de dado, o TS já entende automatico
 let inf = "Inference"
 //inf = 1 // vai dar erro pois o TS entende que a variavel inf só pode receber string
+console.log('olaaaaa2')
