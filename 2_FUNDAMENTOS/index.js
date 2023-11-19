@@ -19,3 +19,9 @@ console.log(a);
 console.log(typeof a);
 a = true;
 console.log(a);
+// 4 - inference e anotation
+//annotation
+var ann = "Anotation";
+//inference - aqui vc nao declara o tipo de dado, o TS já entende automatico
+var inf = "Inference";
+//inf = 1 // vai dar erro pois o TS entende que a variavel inf só pode receber string
