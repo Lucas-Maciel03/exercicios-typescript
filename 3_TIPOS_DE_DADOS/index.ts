@@ -15,3 +15,10 @@ const nums: Array<number> = [1, 3, 4]
 nums.push(9)
 console.log(nums)
 
+//2 - any
+//com o any a tipagem fica fraca e pode não ser interessante
+const arr1: any = [3, 'ola', false, []]
+
+arr1.push([5, 6, 7])
+
+console.log(arr1)
