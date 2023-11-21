@@ -22,3 +22,27 @@ const arr1: any = [3, 'ola', false, []]
 arr1.push([5, 6, 7])
 
 console.log(arr1)
+
+//3 - parametros tipados
+
+function soma(a: number, b: number){
+    console.log(a + b)
+}
+
+soma(3, 1)
+// soma(3, '1')
+
+//4 - retorno de função
+function greeting(name: string): string{
+    return `Olá, ${name}`
+}
+
+console.log(greeting("Lucas"))
+
+//5 - funções anonimas
+//o TS ajuda fazendo validações do codigo digitado, dando dicas de possiveis erros
+setTimeout(function(){
+    const salary: number = 1000
+    //console.log(parseFloat(salary))
+    //console.log(salary)
+}, 2000)
