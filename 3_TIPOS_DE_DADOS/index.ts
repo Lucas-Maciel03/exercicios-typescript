@@ -86,3 +86,25 @@ function advancedGreeting(firstName: string, lastName?: string){
 
 console.log(advancedGreeting("Lucas", "Maciel"))
 console.log(advancedGreeting("Diniz"))
+
+//9 - union types
+//é uma alternativa ao any, podemos determinar dois tipos para um dado
+function showBalance(balance: number | string){
+    console.log(`O saldo da conta é ${balance}`)
+}
+
+showBalance('300')
+showBalance(500)
+//showBalance(true) error
+
+//10 - Avançando em union types
+function showUserRole(role: boolean | string){
+    if(typeof role === "boolean"){
+        return "Usuário não Aprovado!"
+    }
+
+    return `A função do usuário é ${role}`
+}
+
+console.log(showUserRole("Admin"))
+console.log(showUserRole(false))
