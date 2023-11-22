@@ -41,3 +41,27 @@ function passCoordinates(coord) {
 const objCoord = { x: 3.244, y: 84.2 };
 passCoordinates(objCoord);
 //passCoordinates({x: 322, y: 345}) erro
+//7 - propriedades opcionais
+//declarar a variavel com "nomeVar?" torna ela opcional
+//apenas o ultimo argumento pode ser opcional
+function showNums(a, b, c) {
+    console.log("A: " + a);
+    console.log("B: " + b);
+    if (c) {
+        console.log("C: " + c);
+    }
+}
+showNums(1, 2, 4);
+showNums(5, 3);
+//8 - Validar parametros opcionais
+function advancedGreeting(firstName, lastName) {
+    if (lastName !== undefined) {
+        return `Ola, ${firstName} ${lastName}, tudo bem?`;
+    }
+    //essa validacao acima é uma early return
+    //(quando retornamos algo antes pq ja chegou em uma condição que é suficiente)
+    //é uma otimização de função
+    return `Olá, ${firstName}, tudo bem?`;
+}
+console.log(advancedGreeting("Lucas", "Maciel"));
+console.log(advancedGreeting("Diniz"));
