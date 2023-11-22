@@ -33,3 +33,11 @@ setTimeout(function () {
     //console.log(parseFloat(salary))
     //console.log(salary)
 }, 2000);
+//6 - tipos de Objetos
+function passCoordinates(coord) {
+    console.log("X coordinates: " + coord.x);
+    console.log("Y coordinates: " + coord.y);
+}
+const objCoord = { x: 3.244, y: 84.2 };
+passCoordinates(objCoord);
+//passCoordinates({x: 322, y: 345}) erro
