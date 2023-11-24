@@ -82,3 +82,23 @@ function showUserRole(role) {
 }
 console.log(showUserRole("Admin"));
 console.log(showUserRole(false));
+function showId(id) {
+    console.log(`O ID é: ${id}`);
+}
+showId(12);
+showId("256");
+// function showCoords(obj: {x: number, y: number, z: number} )
+function showCoords(obj) {
+    console.log(`x: ${obj.x}, y: ${obj.y}, z: ${obj.z}`);
+}
+const coordObj = {
+    x: 10,
+    y: 25,
+    z: 30
+};
+showCoords(coordObj);
+const ps = { name: 'lfm', age: 12 };
+console.log(ps);
+// type personType = {
+//     age: number
+// }

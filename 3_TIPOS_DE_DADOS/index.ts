@@ -108,3 +108,56 @@ function showUserRole(role: boolean | string){
 
 console.log(showUserRole("Admin"))
 console.log(showUserRole(false))
+
+//12 - type alias
+//é um aalternativa ao union type
+type ID = number | string
+
+function showId(id: ID){
+    console.log(`O ID é: ${id}`)
+}
+
+showId(12)
+showId("256")
+
+//13 - interface
+interface Point {
+    x: number
+    y: number
+    z: number
+}
+
+// function showCoords(obj: {x: number, y: number, z: number} )
+function showCoords(obj: Point){
+    console.log(`x: ${obj.x}, y: ${obj.y}, z: ${obj.z}`)
+}
+
+const coordObj:Point = {
+    x: 10,
+    y: 25,
+    z: 30
+}
+
+showCoords(coordObj)
+
+//14 - interface x type alias
+//é possivel modificar as interfaces ao longo do codigo, já o alias não
+
+interface Person{
+    name: string
+}
+
+interface Person{
+    age: number
+}
+
+const ps:Person = {name: 'lfm', age: 12}
+console.log(ps)
+
+//type alias
+type personType = {
+    name: string
+}
+// type personType = {
+//     age: number
+// }
