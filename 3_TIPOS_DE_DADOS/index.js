@@ -102,3 +102,22 @@ console.log(ps);
 // type personType = {
 //     age: number
 // }
+//15 - literal type
+//permite colocar valores como tipos, restringe nao só a tipos mas tbm aos valores passados
+// é um recurso muito utilizado com union type
+let test;
+test = "testando";
+console.log(test);
+function showDirection(direction) {
+    console.log(`A direção é ${direction}`);
+}
+showDirection("right");
+// showDirection("top") error
+showDirection("left");
+//16 - non-null Assertion operator
+//é um erro que o ts da baseado num valor q ainda não está disponivel
+//se sabemos que o valor ficara disponivel utilizamos o caractere "!"
+const p = document.getElementById("some-p");
+//console.log(p.innerText) // error
+//usamos a exclamação quando gente sabe q ta la mas o TS nao consegue identificar
+console.log(p.innerText);
