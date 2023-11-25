@@ -121,3 +121,19 @@ const p = document.getElementById("some-p");
 //console.log(p.innerText) // error
 //usamos a exclamação quando gente sabe q ta la mas o TS nao consegue identificar
 console.log(p.innerText);
+//17 - bigint
+//para compilar o bigint mudamos o valor no tsconfig para es2020
+let n;
+//n = 1 //error
+n = 1000n;
+console.log(n);
+//18 - symbol
+//cria uma referencia unica para um valor
+//mesmo que possuam o mesmo valor serão consideradas diferentes
+let symbolA = Symbol("a");
+let symbolB = Symbol("a");
+console.log(symbolA == symbolB); //false
+console.log(symbolA === symbolB); //false
+symbolB = symbolA;
+console.log(symbolA == symbolB); //true
+console.log(symbolA === symbolB); //true
