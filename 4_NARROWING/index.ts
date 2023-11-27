@@ -31,3 +31,36 @@ function operations(arr: number[], operation?: string | undefined){
 operations([1, 2, 3])
 operations([1, 2, 3], "sum")
 operations([1, 2, 4], "mult")
+
+//3 - instanceof
+class User {
+    name
+
+    constructor(name: string){
+        this.name = name
+    }
+}
+
+class SuperUser extends User{
+    constructor(name: string){
+        super(name)
+    }
+}
+
+const lucas = new User("Lucas")
+const marcos = new SuperUser("Marcos")
+
+console.log(lucas)
+console.log(marcos)
+
+function userGreeting(user: object){
+    if(user instanceof SuperUser){
+        console.log(`Olá superUser ${user.name}`)
+    } else if(user instanceof User){
+        console.log(`Olá ${user.name}`)
+    }
+    //com isso podemos fazer a verificação de acordo com a sua instancia... 
+}
+
+userGreeting(lucas)
+userGreeting(marcos)
