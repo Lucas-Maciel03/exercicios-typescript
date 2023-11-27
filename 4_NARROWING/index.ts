@@ -64,3 +64,30 @@ function userGreeting(user: object){
 
 userGreeting(lucas)
 userGreeting(marcos)
+
+//4 - operador in
+class Dog{
+    name
+    breed
+
+    constructor(name: string, breed?: string){
+        this.name = name
+        if(breed){
+            this.breed = breed
+        }
+    }
+}
+
+const srd = new Dog("Louro")
+const rd = new Dog("bob", "Labrador")
+
+function showDogDetails(dog: Dog){
+    if("breed" in dog){ //operador in
+        console.log(`O cachorro é da raça ${dog.breed}`)
+    } else {
+        console.log(`O cachorro é SRD`)
+    }
+}
+
+showDogDetails(rd)
+showDogDetails(srd)
