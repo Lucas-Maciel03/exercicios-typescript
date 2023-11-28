@@ -19,3 +19,18 @@ function preGreeting(f, userName) {
 preGreeting(greeting, "Lucas");
 preGreeting(greeting, "cas");
 preGreeting(greeting, "dds");
+//3 - generic function
+//a sintaxe <T> simboliza generic
+//esta dizendo que o arr é do tipo T ou seja Generico(ele não sabe q tipo de dao vai vir)
+//o simbolo que define generico é <> as letras dentro são so pra representar....
+function firstElement(arr) {
+    return arr[0];
+}
+console.log(firstElement([4, 5, 8, 10]));
+console.log(firstElement(["f", "h", "b", "z"]));
+//console.log(firstElement("teste")) erro pois está esperando um array
+function mergeObjects(obj1, obj2) {
+    return Object.assign(Object.assign({}, obj1), obj2);
+}
+const newObject = mergeObjects({ name: "Matheus" }, { age: 33, job: "DEV" });
+console.log(newObject);
