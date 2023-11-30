@@ -34,3 +34,20 @@ function mergeObjects(obj1, obj2) {
 }
 const newObject = mergeObjects({ name: "Matheus" }, { age: 33, job: "DEV" });
 console.log(newObject);
+//4 - constraints nas generics functions
+//<T extends> significa que esse generic so ira aceitar tipos number ou string 
+function biggestNumber(a, b) {
+    let biggest;
+    if (+a > +b) {
+        biggest = a;
+    }
+    else {
+        biggest = b;
+    }
+    return biggest;
+}
+console.log(biggestNumber(3, 5));
+console.log(biggestNumber("8", "1"));
+//erro pois so usamos 1 generic entao os dois tipos tem q ser igual
+//console.log(biggestNumber("8", 1)) 
+//console.log(biggestNumber(3, true)) erro
