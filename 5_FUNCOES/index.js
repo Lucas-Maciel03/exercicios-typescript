@@ -51,3 +51,12 @@ console.log(biggestNumber("8", "1"));
 //erro pois so usamos 1 generic entao os dois tipos tem q ser igual
 //console.log(biggestNumber("8", 1)) 
 //console.log(biggestNumber(3, true)) erro
+//5 - especificar tipo de argumento
+function mergeArrays(arr1, arr2) {
+    return arr1.concat(arr2);
+}
+console.log(mergeArrays([2, 7, 5], [8, 5]));
+//para usar tipos diferentes nos arrays utilizamos a sintaxe abaixo
+console.log(mergeArrays([2, 7, 5], ["fs", "ccv", "pll"]));
+//geralmente utilizamos quando estamos usando uma lib de terceiros e
+//nao da pra editar a função ai fazemos da maneira acima 
