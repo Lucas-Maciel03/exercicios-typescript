@@ -60,3 +60,19 @@ console.log(mergeArrays([2, 7, 5], [8, 5]));
 console.log(mergeArrays([2, 7, 5], ["fs", "ccv", "pll"]));
 //geralmente utilizamos quando estamos usando uma lib de terceiros e
 //nao da pra editar a função ai fazemos da maneira acima 
+//6 - parametros opcionais
+function modernGreeting(name, greet) {
+    if (greet) {
+        return `Olá ${greet} ${name}, tudo bem?`;
+    }
+    return `Olá ${name}!`;
+}
+console.log(modernGreeting("Lucas"));
+console.log(modernGreeting("Lucas", "Sr."));
+//7 - parametro default
+//o parametro default tipa por inferencia e preenche o valor caso não tenha um valor passado pra ele
+function soma(n, m = 12) {
+    return n + m;
+}
+console.log(soma(10));
+console.log(soma(80, 5));
