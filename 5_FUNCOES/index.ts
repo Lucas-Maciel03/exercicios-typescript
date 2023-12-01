@@ -120,3 +120,28 @@ function messageError(msg: string): never{
 }
 
 //messageError("algum erro")
+
+//10 - rest parameters
+// é representado por (...)
+//seu uso diz que ela pode ter varios valores, entao ela cria um array com os valores q passamos
+function somaRest(...n: number[]){
+    return n.reduce((number, sum) => sum + number)
+}
+
+console.log(somaRest(1, 2, 3, 4, 5))
+console.log(somaRest(1, 12, 73, 65))
+//console.log(somaRest("teste"))
+
+//11 - destructuring como parametro
+//destructuring tem essa notação de objetos q estao no parametro da função
+function showProductDetails({name, price}: {name: string, price: number}):string{
+    return `Nome do produto ${name}, valor: R$${price}`
+}
+
+const shirt = {name: "Blusa", price: 55.99}
+
+console.log(showProductDetails(shirt))
+
+//erro pois compara os objetos e ve q eles nao batem
+//console.log(showProductDetails({name: "teste", age: 30})) 
+//console.log(showProductDetails([2, 5])) //error
