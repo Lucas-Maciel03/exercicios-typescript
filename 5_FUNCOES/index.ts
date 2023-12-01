@@ -101,3 +101,22 @@ function soma(n: number, m = 12): number{
 
 console.log(soma(10))
 console.log(soma(80, 5))
+
+//8 - tipo unknown
+function doSomething(x: unknown){
+    console.log(x)
+    //console.log(x[1])
+    //tem q notar que para executar esse comanto tem q fazer uma validação do tipo do parametro 
+}
+
+doSomething("ola")
+doSomething("1")
+
+//9 - tipo never
+//o never pode ser usado para funções q mostram erros 
+//a maioria dos devs utilizam void em vez do never
+function messageError(msg: string): never{
+    throw new Error(msg)
+}
+
+//messageError("algum erro")
