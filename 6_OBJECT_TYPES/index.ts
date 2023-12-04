@@ -40,3 +40,15 @@ const u2: User = {email: "fm@email.com",}
 
 showDetail(u1)
 showDetail(u2)
+
+//3 - readyonly
+interface Car{
+    brand: string,
+    readonly wheels: number
+}
+
+const fusca:Car ={ brand: "Wlk", wheels: 4 }
+
+console.log(fusca)
+//fusca.wheels = 5 //erro essa propriedade é so para leitura e nao pode ser alterada
+fusca.brand = "x"

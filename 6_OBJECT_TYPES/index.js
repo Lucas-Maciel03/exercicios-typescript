@@ -22,3 +22,7 @@ const u1 = { email: "lucas@email.com", role: "top" };
 const u2 = { email: "fm@email.com", };
 showDetail(u1);
 showDetail(u2);
+const fusca = { brand: "Wlk", wheels: 4 };
+console.log(fusca);
+//fusca.wheels = 5 //erro essa propriedade é so para leitura e nao pode ser alterada
+fusca.brand = "x";
