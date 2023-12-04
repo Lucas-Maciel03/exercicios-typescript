@@ -52,3 +52,18 @@ const fusca:Car ={ brand: "Wlk", wheels: 4 }
 console.log(fusca)
 //fusca.wheels = 5 //erro essa propriedade é so para leitura e nao pode ser alterada
 fusca.brand = "x"
+
+//4 - index signature
+//utilizamos quando nao sabemos os nomes das chaves mas sabemos qual tipo de um objeto ou array
+interface CoordObject {  
+    //[nome da propriedade]: tipa o valor como number
+    [index: string]: number
+}
+
+let coords: CoordObject = {x: 10}
+
+coords.y = 15
+console.log(coords)
+
+//coords.z = "teste" //erro pois o tipo do valor tem q ser numerico
+
