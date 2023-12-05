@@ -86,3 +86,28 @@ const goku: SuperHuman = { name: "Goku", age: 50, superPowers: ["genki dama", "t
 
 console.log(goku)
 console.log(goku.superPowers[0])
+
+//6 - intersection types
+//sao usados para criar tipos mais complexos utilizando duas interfaces
+//utilizamos o & para concatenar
+
+interface Character{
+    name: string
+}
+
+interface Gun{
+    type: string,
+    caliber: number
+}
+
+//criamos um type HumanWithGun
+//e unimos chacarcter e gun no tipo HumanWithGun
+type HumanWithGun = Character & Gun
+
+const arnold: HumanWithGun = {
+    name: "Arnold",
+    type: "Pistoll",
+    caliber: 9
+}
+
+console.log(arnold)

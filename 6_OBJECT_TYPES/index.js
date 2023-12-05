@@ -34,3 +34,9 @@ console.log(pessoa1);
 const goku = { name: "Goku", age: 50, superPowers: ["genki dama", "teleporte"] };
 console.log(goku);
 console.log(goku.superPowers[0]);
+const arnold = {
+    name: "Arnold",
+    type: "Pistoll",
+    caliber: 9
+};
+console.log(arnold);
