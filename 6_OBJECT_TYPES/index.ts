@@ -111,3 +111,25 @@ const arnold: HumanWithGun = {
 }
 
 console.log(arnold)
+
+//7 - readyonly array
+/*  deixa os elementos do array como readonly
+    podemos aplicar um tipo para os itens do array
+    a modificação de itens pode ocorrer atraves de metodos mas nao podemos aumentar o array
+*/
+
+let myArray: ReadonlyArray<string> = ["Banana", "Uva", "Abacaxi"]
+
+//myArray[3] = "Maça" //sem o ReadOnlyArray esse comando iria adicionar "Maça" ao array
+
+console.log(myArray)
+//sao permitidas modificações atraves de metodos, porem modificações diretas nao sao
+myArray.forEach((item) => {
+    console.log(`Fruta: ${item}`)
+})
+
+myArray = myArray.map((item) => {
+    return `Fruta: ${item}`
+})
+
+console.log(myArray)
