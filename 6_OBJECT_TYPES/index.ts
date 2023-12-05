@@ -67,3 +67,22 @@ console.log(coords)
 
 //coords.z = "teste" //erro pois o tipo do valor tem q ser numerico
 
+//5 - extending interface
+interface Human{
+    name: string
+    age: number
+}
+
+//herança de interface usando o extends
+interface SuperHuman extends Human{
+    superPowers: string[]
+}
+
+const pessoa1: Human = { name: "Lucas", age: 21 }
+
+console.log(pessoa1)
+
+const goku: SuperHuman = { name: "Goku", age: 50, superPowers: ["genki dama", "teleporte"] }
+
+console.log(goku)
+console.log(goku.superPowers[0])

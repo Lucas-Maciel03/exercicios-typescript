@@ -29,4 +29,8 @@ fusca.brand = "x";
 let coords = { x: 10 };
 coords.y = 15;
 console.log(coords);
-//coords.z = "teste" //erro pois o tipo do valor tem q ser numerico
+const pessoa1 = { name: "Lucas", age: 21 };
+console.log(pessoa1);
+const goku = { name: "Goku", age: 50, superPowers: ["genki dama", "teleporte"] };
+console.log(goku);
+console.log(goku.superPowers[0]);
