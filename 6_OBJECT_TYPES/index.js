@@ -56,3 +56,16 @@ myArray = myArray.map((item) => {
     return `Fruta: ${item}`;
 });
 console.log(myArray);
+//pode ter outros tipos de dados misturados
+const myNumberArray = [7, 8, 9, 10, 11];
+const anotherUser = ["Lucas", 21];
+console.log(anotherUser[0]);
+anotherUser[0] = "Lfm";
+console.log(anotherUser[0]);
+//9 - tuplas com readyonly
+function showNumbers(numbers) {
+    //numbers[0] = 20 // erro n pode modificar um readyonly
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
+showNumbers([1, 2]);

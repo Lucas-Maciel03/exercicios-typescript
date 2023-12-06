@@ -133,3 +133,37 @@ myArray = myArray.map((item) => {
 })
 
 console.log(myArray)
+
+//8 - tuplas
+/*  tupla é um tipo de array porem definimos o tipo e a quantidade de itens
+    criamos um novo type e inserimos um array com os tipos necessarios
+    cada tipo conta como elemento
+*/
+
+type fiveNumber = [number, number, number, number, number]
+//pode ter outros tipos de dados misturados
+
+const myNumberArray: fiveNumber = [7, 8, 9, 10, 11]
+
+//const arr2: fiveNumber = [1, 2, 3, 4, 5, 6] 
+//erro pois tem 6 elementos e ele foi definido apenas para 5
+
+//const arr3: fiveNumber = [11, "sim", true, false, 44]  
+//erro pois todos os dados foram definidos para ser number
+
+type nameAndAge = [string, number]
+
+const anotherUser: nameAndAge = ["Lucas", 21]
+
+console.log(anotherUser[0])
+anotherUser[0] = "Lfm"
+console.log(anotherUser[0])
+
+//9 - tuplas com readyonly
+function showNumbers(numbers: readonly[number, number]){
+    //numbers[0] = 20 // erro n pode modificar um readyonly
+    console.log(numbers[0])
+    console.log(numbers[1])
+}
+
+showNumbers([1, 2])
