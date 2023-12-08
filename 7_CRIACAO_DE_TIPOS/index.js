@@ -8,5 +8,25 @@ function showData(arg) {
 console.log(showData(5));
 console.log(showData("nome do usuário"));
 console.log(showData(true));
-console.log(showData([]));
 console.log(showData(["true", "xx", 5]));
+//2 - Constraints em generics
+/* As constraints nos ajudam a limitar os tipos aceitos
+   como em generic elaspodem ter qualquer tipo, as constraints filtram os aceitos
+   adiciona organização para aproveitar a liberdade dos generics
+*/
+function showProductName(obj) {
+    if (!obj.name) {
+        return `erro`;
+    }
+    return `O nome do produto é: ${obj.name}`;
+}
+/* mesmo que o objeto passado tenha outras propriedades elas nao importam
+   pois na declaração da função definimos que o generic teria apenas a propriedade name
+   se houver a propriedade name no objeto ele vai aceitar caso nao tenha ai da erro
+*/
+const product = { name: "Lápis", cor: "Azul" };
+const product2 = { color: "green", name: "Carro" }; //ok
+console.log(showProductName(product));
+console.log(showProductName(product2));
+//const product1 = {age: 15, country: "BR"}
+//console.log(showProductName(product1)) //erro
