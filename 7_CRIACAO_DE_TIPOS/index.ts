@@ -33,3 +33,28 @@ console.log(showProductName(product2))
 
 //const product1 = {age: 15, country: "BR"}
 //console.log(showProductName(product1)) //erro
+
+//3 - Interface com generics
+/*  com interfaces podemos criar tipos mais complexos
+    adicionando generics podemos deixalos mais brandos
+    aceitando tipos diferentes em ocasioes diferentes
+*/
+
+interface MyObject<T, U, Q>{
+    name: string
+    wheels: T
+    engine: U
+    color: Q
+}
+
+//com o type conseguimos unir generics e interfaces criando um objeto mais poderoso
+//manipulando totalmente os tipos aceitos
+type car = MyObject<number, number, string>
+type pen = MyObject<boolean, boolean, string>
+
+//aqui criamos os objetos seguindos as interfaces com os generics aplicados
+const myCar:car = {name: "fusca", wheels: 4, engine: 2.1, color: "Verde"}
+const myPen:pen = {name: "Bic", wheels: false, engine: false, color: "Azul"}
+
+console.log(myCar)
+console.log(myPen)

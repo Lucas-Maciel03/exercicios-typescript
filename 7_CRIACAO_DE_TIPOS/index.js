@@ -28,5 +28,8 @@ const product = { name: "Lápis", cor: "Azul" };
 const product2 = { color: "green", name: "Carro" }; //ok
 console.log(showProductName(product));
 console.log(showProductName(product2));
-//const product1 = {age: 15, country: "BR"}
-//console.log(showProductName(product1)) //erro
+//aqui criamos os objetos seguindos as interfaces com os generics aplicados
+const myCar = { name: "fusca", wheels: 4, engine: 2.1, color: "Verde" };
+const myPen = { name: "Bic", wheels: false, engine: false, color: "Azul" };
+console.log(myCar);
+console.log(myPen);
