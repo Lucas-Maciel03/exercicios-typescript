@@ -58,3 +58,42 @@ const myPen:pen = {name: "Bic", wheels: false, engine: false, color: "Azul"}
 
 console.log(myCar)
 console.log(myPen)
+
+//4 - type parameters
+function getSomeKey<T, K extends keyof T>(obj: T, key: K){
+    return `A chave ${[key]} está presente no objeto e tem valor de ${obj[key]}`
+}
+/*  com essa notação <T, K extends keyof T> podemos ter a seguranca de que
+    apropriedade (key) esteja realmente presente dentro do objeto (obj)
+*/
+const server = {
+    hd: "2TB",
+    ram: "32GB"
+}
+
+console.log(getSomeKey(server, "ram"))
+//console.log(getSomeKey(server, "teste")) //erro pois a propriedade teste nao existem server
+
+//5 - keyof type operator
+/*  ele linka quase como se fosse o exemplo anterior
+    ele nao sabe o que esta pra vir exatamente
+    mas ele quer que seja uma chave que esteja presente no objeto passado
+    que foi tipado pelo keyof
+*/
+type Character = { name: string, age: number, hasDriveLicense: boolean }
+
+type C = keyof Character
+
+function showCharName(obj: Character, key: C) {
+    return `${obj[key]} `
+}
+
+const myChar: Character = {
+    name: "Lucas",
+    age: 21,
+    hasDriveLicense: true
+}
+
+console.log(showCharName(myChar, "name"))
+console.log(showCharName(myChar, "age"))
+//console.log(showCharName(myChar, "idade")) //erro, esse parametro n tem no objeto myChar

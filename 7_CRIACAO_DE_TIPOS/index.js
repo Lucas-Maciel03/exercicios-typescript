@@ -33,3 +33,26 @@ const myCar = { name: "fusca", wheels: 4, engine: 2.1, color: "Verde" };
 const myPen = { name: "Bic", wheels: false, engine: false, color: "Azul" };
 console.log(myCar);
 console.log(myPen);
+//4 - type parameters
+function getSomeKey(obj, key) {
+    return `A chave ${[key]} está presente no objeto e tem valor de ${obj[key]}`;
+}
+/*  com essa notação <T, K extends keyof T> podemos ter a seguranca de que
+    apropriedade (key) esteja realmente presente dentro do objeto (obj)
+*/
+const server = {
+    hd: "2TB",
+    ram: "32GB"
+};
+console.log(getSomeKey(server, "ram"));
+function showCharName(obj, key) {
+    return `${obj[key]} `;
+}
+const myChar = {
+    name: "Lucas",
+    age: 21,
+    hasDriveLicense: true
+};
+console.log(showCharName(myChar, "name"));
+console.log(showCharName(myChar, "age"));
+//console.log(showCharName(myChar, "idade")) //erro, esse parametro n tem no objeto myChar
