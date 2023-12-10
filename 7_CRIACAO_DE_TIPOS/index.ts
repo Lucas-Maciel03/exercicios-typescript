@@ -107,3 +107,34 @@ const userName2: typeof userName = "Maria"
 
 type x = typeof userName
 const userName4: x = "Diniz"
+
+//7 - indexed access type
+type Truck = { km: number, kg: number, description: string }
+
+//esse representa uma propriedade especifica 
+type Km = Truck["km"] 
+
+const newTruck: Truck = {
+    km: 2000,
+    kg: 1900,
+    description: "caminhao pequeno"
+}
+
+function showKm(km: Km){
+    console.log(`O veiculo tem km de ${km}`)
+}
+
+showKm(newTruck.km)
+
+/*  a indexed access nos da uma liberdade maior
+    podendo ser utilizado em outros objetos que tenham chave do mesmo tipo.
+    ja a indexof nos liga ao objeto principal
+*/
+
+const newCar: Truck = {
+    km: 1000,
+    kg: 800,
+    description: "carro novo"
+}
+
+showKm(newCar.km)

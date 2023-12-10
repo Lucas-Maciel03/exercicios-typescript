@@ -62,3 +62,22 @@ console.log(showCharName(myChar, "age"));
 const userName = "Lucas";
 const userName2 = "Maria";
 const userName4 = "Diniz";
+const newTruck = {
+    km: 2000,
+    kg: 1900,
+    description: "caminhao pequeno"
+};
+function showKm(km) {
+    console.log(`O veiculo tem km de ${km}`);
+}
+showKm(newTruck.km);
+/*  a indexed access nos da uma liberdade maior
+    podendo ser utilizado em outros objetos que tenham chave do mesmo tipo.
+    ja a indexof nos liga ao objeto principal
+*/
+const newCar = {
+    km: 1000,
+    kg: 800,
+    description: "carro novo"
+};
+showKm(newCar.km);
