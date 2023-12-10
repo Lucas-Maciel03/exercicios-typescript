@@ -56,3 +56,9 @@ const myChar = {
 console.log(showCharName(myChar, "name"));
 console.log(showCharName(myChar, "age"));
 //console.log(showCharName(myChar, "idade")) //erro, esse parametro n tem no objeto myChar
+//6 - typeof type operator
+//é uma forma de declarar a variavel igual ao tipo de outra variavel
+//conseguimos usar o typeof para a criação de tipos e não so para verificação
+const userName = "Lucas";
+const userName2 = "Maria";
+const userName4 = "Diniz";
