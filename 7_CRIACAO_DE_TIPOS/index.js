@@ -81,3 +81,5 @@ const newCar = {
     description: "carro novo"
 };
 showKm(newCar.km);
+const someVar = 8;
+const testing = "some a text";

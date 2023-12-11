@@ -138,3 +138,33 @@ const newCar: Truck = {
 }
 
 showKm(newCar.km)
+
+//8 - conditional types
+interface A {}
+
+interface B extends A {}
+
+interface teste {
+    showName(): string
+}
+
+type myType = B extends A ? number : string
+
+const someVar:myType = 8
+//const someVar1:myType = 'll'
+
+type myTypeB = teste extends {showNumber(): number} ? string : boolean
+
+//9 - template literals type
+type testeA = "text"
+
+type customType = `some a ${testeA}`
+
+const testing: customType = "some a text"
+//const testing2: customType = "some a text 2"
+
+type a1 = "testando"
+type a2 = "union"
+
+type a3 = `${a1}` | `${a2}`
+
