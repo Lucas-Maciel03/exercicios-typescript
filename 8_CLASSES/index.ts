@@ -26,4 +26,23 @@ class NewUser {
     */
 }
 //inicializando com constructor new
-const joao = new NewUser("Lucas", 21)
+const joao = new NewUser("João", 25)
+console.log(joao)
+
+//3 - readyonly
+//tornando um valor somente para consulta
+class Car{
+    name
+    readonly wheels = 4
+
+    constructor(name: string){
+        this.name = name
+    }
+}
+
+const fusca = new Car("Fusca")
+//fusca.wheels = 3 //erro n pode mudar valor de uma propriedade readyonly
+
+console.log(fusca)
+fusca.name = "Fusca Azul"
+console.log(fusca)
