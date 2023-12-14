@@ -67,3 +67,16 @@ const bilbo = new Duende("Bilbo");
 console.log(bilbo.name);
 bilbo.greeting();
 console.log(bilbo);
+//6 - this
+//serve para referirmos ao objeto em si, ou seja acessar suas propriedades
+class Truck {
+    constructor(model, hp) {
+        this.model = model;
+        this.hp = hp;
+    }
+    showDetails() {
+        console.log(`Caminhão do modelo ${this.model}, que tem ${this.hp} cavalos de potência.`);
+    }
+}
+const wolks = new Truck("Wolks", 120);
+wolks.showDetails();
