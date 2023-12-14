@@ -30,3 +30,23 @@ const fusca = new Car("Fusca");
 console.log(fusca);
 fusca.name = "Fusca Azul";
 console.log(fusca);
+//4 - herança e super
+/*  para gerar uma heranca usamos o comando extends
+    vamos precisar passar as propriedades da classe pai para ela
+    isso será feito com a função super
+*/
+class Machine {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const trator = new Machine("Trator");
+class KillerMachine extends Machine {
+    constructor(name, guns) {
+        super(name);
+        this.guns = guns;
+    }
+}
+const destroyer = new KillerMachine("Destroyer", 4);
+console.log(trator);
+console.log(destroyer);
