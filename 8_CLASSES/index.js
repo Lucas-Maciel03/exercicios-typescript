@@ -36,14 +36,15 @@ console.log(fusca);
     isso será feito com a função super
 */
 class Machine {
-    constructor(name) {
+    constructor(name, id) {
         this.name = name;
+        this.id = id;
     }
 }
-const trator = new Machine("Trator");
+const trator = new Machine("Trator", 1);
 class KillerMachine extends Machine {
-    constructor(name, guns) {
-        super(name);
+    constructor(name, id, guns) {
+        super(name, id);
         this.guns = guns;
     }
 }

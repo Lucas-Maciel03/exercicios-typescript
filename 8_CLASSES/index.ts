@@ -55,19 +55,21 @@ console.log(fusca)
 
 class Machine {
     name
+    id
 
-    constructor(name: string){
+    constructor(name: string, id: number){
         this.name = name
+        this.id = id
     }
 }
 
-const trator = new Machine("Trator")
+const trator = new Machine("Trator", 1)
 
 class KillerMachine extends Machine {
     guns
 
-    constructor(name: string, guns: number){
-        super(name)
+    constructor(name: string, id:number, guns: number){
+        super(name, id)
         this.guns = guns
     }
 }
