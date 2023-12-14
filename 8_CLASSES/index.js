@@ -48,7 +48,7 @@ class KillerMachine extends Machine {
         this.guns = guns;
     }
 }
-const destroyer = new KillerMachine("Destroyer", 4);
+const destroyer = new KillerMachine("Destroyer", 2, 3);
 console.log(trator);
 console.log(destroyer);
 //5 - metodos
