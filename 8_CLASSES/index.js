@@ -50,3 +50,20 @@ class KillerMachine extends Machine {
 const destroyer = new KillerMachine("Destroyer", 4);
 console.log(trator);
 console.log(destroyer);
+//5 - metodos
+//metodos sao como funçoes das classes
+//podemos criar junto com as classes e os objetos podem utilizar-los
+//é uma maneira de adicionar funcionalidade as classes
+class Duende {
+    constructor(name) {
+        this.name = name;
+    }
+    //metodo greeting
+    greeting() {
+        console.log("Olá, Humano!");
+    }
+}
+const bilbo = new Duende("Bilbo");
+console.log(bilbo.name);
+bilbo.greeting();
+console.log(bilbo);
