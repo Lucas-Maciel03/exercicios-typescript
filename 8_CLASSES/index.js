@@ -98,3 +98,35 @@ class Person {
 }
 const lucasMaciel = new Person("Lucas", "Maciel");
 console.log(lucasMaciel.fullName);
+//8 - setters
+/*  Os getter leem propriedades e os setter modificam/atribuem valores as propriedades
+    podemos validar antes de inserir uma propriedade
+    Os setters funcionam como metodos
+*/
+class Coords {
+    //nesse caso não há constructor
+    //as propriedades sao preenchidas a partir dos setters
+    set fillx(x) {
+        if (x === 0) {
+            return;
+        }
+        this.x = x;
+        console.log("X inserido com sucesso!");
+    }
+    set filly(y) {
+        if (y === 0) {
+            return;
+        }
+        this.y = y;
+        console.log("Y inserido com sucesso!");
+    }
+    get showCoords() {
+        return `X: ${this.x} e Y: ${this.y}`;
+    }
+}
+const myCoords = new Coords();
+myCoords.fillx = 15;
+myCoords.filly = 0;
+myCoords.filly = 11;
+console.log(myCoords);
+console.log(myCoords.showCoords);
