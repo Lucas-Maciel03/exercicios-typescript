@@ -122,3 +122,27 @@ class Truck {
 const wolks = new Truck("Wolks", 120)
 
 wolks.showDetails()
+
+//7 - Getters
+/*  Os getters são uma forma de retornar propriedades do objeto,
+    porem podemos modificar-las nesse retorno
+    ou seja é um método para ler retornos
+*/
+class Person {
+    name
+    surname
+
+    constructor(name: string, surname: string){
+        this.name = name
+        this.surname = surname
+    }
+
+    //um get tem que retornar algo
+    get fullName(){
+        return this.name + " " + this.surname
+    } 
+}
+
+const lucasMaciel = new Person("Lucas", "Maciel")
+
+console.log(lucasMaciel.fullName)
