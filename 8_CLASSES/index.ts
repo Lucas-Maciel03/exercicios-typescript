@@ -192,3 +192,47 @@ myCoords.filly = 11
 
 console.log(myCoords)
 console.log(myCoords.showCoords)
+
+//9 - herança de interface (implements)
+/*  podemos herdar as interfaces com o comando implements, a ideia é parecida com extends
+    porem essa forma é usada para criar metodos que varias classem terão em comum
+*/
+
+interface showTitle{
+    itemTitle(): string
+    //na interface eu so informo que vai ter um metodo, não sendo preciso desenvolver ele aqui
+    //o desenvolvimento pode ser feito na classe que ira implementar a interface
+    //metodo que recebe propriedade e retorna uma string
+}
+
+class Blogpost implements showTitle{
+    title
+
+    constructor(title: string){
+        this.title = title
+    }
+
+    itemTitle(): string {
+        return `Titulo do post ${this.title}`
+    }
+}
+
+const postagem = new Blogpost("SPFC")
+
+console.log(postagem.itemTitle())
+
+class NewsPost implements showTitle{
+    title
+
+    constructor(title: string){
+        this.title = title
+    }
+
+    itemTitle(): string {
+        return `Noticia: ${this.title}`
+    }
+}
+
+const noticia = new NewsPost("Campeão Copa do brasil!")
+
+console.log(noticia.itemTitle())

@@ -130,3 +130,23 @@ myCoords.filly = 0;
 myCoords.filly = 11;
 console.log(myCoords);
 console.log(myCoords.showCoords);
+class Blogpost {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `Titulo do post ${this.title}`;
+    }
+}
+const postagem = new Blogpost("SPFC");
+console.log(postagem.itemTitle());
+class NewsPost {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `Noticia: ${this.title}`;
+    }
+}
+const noticia = new NewsPost("Campeão Copa do brasil!");
+console.log(noticia.itemTitle());
